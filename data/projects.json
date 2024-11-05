@@ -1,0 +1,19 @@
+[
+    {
+      "title": "Projeto 1",
+      "author": "Autor 1",
+      "thumbnail": "assets/images/projeto1.jpg",
+      "description": "Descrição detalhada do projeto 1.",
+      "videoLink": "https://www.youtube.com/embed/video1",
+      "projectLink": "detalhes.html?id=projeto1"
+    },
+    {
+      "title": "Projeto 2",
+      "author": "Autor 2",
+      "thumbnail": "assets/images/projeto2.jpg",
+      "description": "Descrição detalhada do projeto 2.",
+      "videoLink": "https://www.youtube.com/embed/video2",
+      "projectLink": "detalhes.html?id=projeto2"
+    }
+  ]
+  

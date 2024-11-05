@@ -1,0 +1,11 @@
+/projeto-cards
+|-- index.html
+|-- css
+|   |-- style.css
+|-- js
+|   |-- script.js
+|-- data
+|   |-- projects.json
+|-- assets
+|   |-- images (imagens de exemplo)
+|-- detalhes.html

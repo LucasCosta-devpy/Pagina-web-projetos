@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Projeto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="project-title"></h1>
+    <img id="project-thumbnail" src="" alt="">
+    <p id="project-description"></p>
+    <iframe id="project-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const projectId = params.get('id');
+
+      fetch('data/projects.json')
+        .then(response => response.json())
+        .then(data => {
+          const project = data.find(p => p.projectLink.includes(projectId));
+          if (project) {
+            document.getElementById('project-title').innerText = project.title;
+            document.getElementById('project-thumbnail').src = project.thumbnail;
+            document.getElementById('project-description').innerText = project.description;
+            document.getElementById('project-video').src = project.videoLink;
+          }
+        })
+        .catch(error => console.error('Erro ao carregar detalhes:', error));
+    });
+  </script>
+</body>
+</html>
